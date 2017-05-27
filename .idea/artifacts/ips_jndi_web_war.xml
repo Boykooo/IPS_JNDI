@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ips_jndi-web:war">
+    <output-path>$PROJECT_DIR$/ips_jndi-web/target</output-path>
+    <root id="archive" name="ips_jndi-web.war">
+      <element id="artifact" artifact-name="ips_jndi-web:war exploded" />
+    </root>
+  </artifact>
+</component>

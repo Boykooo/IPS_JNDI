@@ -1,3 +1,5 @@
+package jndi;
+
 import entities.User;
 import remote.UserDaoRemote;
 
@@ -27,7 +29,6 @@ public class UserDaoImpl {
         catch (Exception e){
             e.printStackTrace();
         }
-
     }
 
     public User findById(String o){
