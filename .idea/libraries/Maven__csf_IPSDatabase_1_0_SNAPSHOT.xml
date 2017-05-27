@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: csf:IPSDatabase:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/csf/IPSDatabase/1.0-SNAPSHOT/IPSDatabase-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/csf/IPSDatabase/1.0-SNAPSHOT/IPSDatabase-1.0-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/csf/IPSDatabase/1.0-SNAPSHOT/IPSDatabase-1.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
