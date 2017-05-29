@@ -2,7 +2,6 @@ package jsf;
 
 import entities.User;
 import jndi.UserDaoImpl;
-
 import javax.annotation.ManagedBean;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
@@ -46,5 +45,9 @@ public class UserBean {
 
     public void setUsers(List<User> users) {
         this.users = users;
+    }
+
+    public void runTest(){
+
     }
 }

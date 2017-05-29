@@ -13,8 +13,7 @@ import java.util.List;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(EJBContainerRunner.class)
-
-public class DaoTest  {
+public class DaoTest {
 
     private static UserDaoImpl userDao;
 
@@ -24,21 +23,23 @@ public class DaoTest  {
     @BeforeClass
     public static void setUp() throws NamingException {
         ejbContainer = EJBContainer.createEJBContainer();
-        System.out.println("Opening the container" );
+        System.out.println("Opening the container");
         ctx = ejbContainer.getContext();
         userDao = (UserDaoImpl) ctx.lookup("java:global/ips_jndi-web/UserDaoImpl");
     }
 
-    @Test
-    public void testFindAll() throws NamingException {
 
+    @Test
+    public void testFindAll() {
         List<User> all = userDao.findAll();
-        System.out.println(all.size());
+        System.out.println();
+
+        assertTrue(all.size() == 19);
     }
 
 
     @Test
-    public void testAdd(){
+    public void testAdd() {
         User user = getMockEntity();
         userDao.insert(user);
 
@@ -49,7 +50,7 @@ public class DaoTest  {
 
 
     @Test
-    public void testDelete(){
+    public void testDelete() {
         User user = getMockEntity();
         userDao.insert(user);
         userDao.delete(user.getEmail());
@@ -58,16 +59,17 @@ public class DaoTest  {
     }
 
     @Test
-    public void testUpdate(){
+    public void testUpdate() {
         User user = getMockEntity();
         userDao.insert(user);
         user.setPassword("000000");
         userDao.update(user);
 
         assertTrue(userDao.findById(user.getEmail()).getPassword().equals(user.getPassword()));
+        userDao.delete(user.getEmail());
     }
 
-    private User getMockEntity(){
+    public User getMockEntity() {
         User user = new User();
         user.setEmail("olololo@ololo.ruu");
         user.setPhoneNumber("1");
