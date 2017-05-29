@@ -2,11 +2,13 @@ package jsf;
 
 import entities.User;
 import jndi.UserDaoImpl;
+
 import javax.annotation.ManagedBean;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
+import java.util.ArrayList;
 import java.util.List;
 
 @Named("userBean")
@@ -47,7 +49,4 @@ public class UserBean {
         this.users = users;
     }
 
-    public void runTest(){
-
-    }
 }
